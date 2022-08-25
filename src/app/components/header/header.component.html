@@ -1,0 +1,16 @@
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-button class="menu-button" (click)="clickMenu()">
+        <mat-icon >menu</mat-icon>
+    </button>
+    <img src="assets/img/header/logo.png" alt="logo">
+    </mat-toolbar>
+    
+    <mat-sidenav-container [ngStyle]="{'display':displayStyle}">
+        <mat-sidenav >
+            <button mat-button class="menu-button" routerLink="/users" (click)="closePopup()">
+                <mat-icon>people</mat-icon>
+                <span >Usuario</span>
+            </button>                  
+        </mat-sidenav>        
+    </mat-sidenav-container>
+    

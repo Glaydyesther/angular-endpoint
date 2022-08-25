@@ -1,0 +1,34 @@
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display':displayStyle}" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <p>Nombre: {{listUser.name}}</p>
+        <p>Username: {{listUser.username}}</p>
+        <p>Email: {{listUser.email}}</p>
+        <p>Teléfono: {{listUser.phone}}</p>
+        <p>SitioWeb: {{listUser.website}}</p>  
+                               
+        <google-map width="500" height="300" [center] ="position">
+<map-marker
+[position] = "position"
+>
+  
+</map-marker>
+        </google-map>  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" 
+                (click)="closePopup()" routerLink="/users">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
